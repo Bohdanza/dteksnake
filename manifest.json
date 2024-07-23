@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Веселий ДТЕК",
+  "description": "Зіграйте у змійку, щоб вгамувати сльози після перегляду графіку відключень",
+  "version": "1.0",
+  "action": 
+  {
+    "default_popup": "dpop.html",
+    "default_icon": "dtek.png"
+  },
+  "content_scripts": 
+  [
+    {
+      "matches":["https://www.dtek-kem.com.ua/ua/shutdowns", "https://www.dtek-krem.com.ua/ua/shutdowns", 
+        "https://www.dtek-dem.com.ua/ua/shutdowns", "https://www.dtek-dnem.com.ua/ua/shutdowns", 
+        "https://www.dtek-oem.com.ua/ua/shutdowns"],
+      "js":["snake.js"],
+      "run_at":"document_idle"
+    }
+  ]
+}
